@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* product_trim_name
+#   * product_trim_name
 #
 msgid ""
 msgstr ""
@@ -40,3 +40,4 @@ msgstr ""
 #: model:ir.model.fields,field_description:product_trim_name.field_product_template__trim_name
 msgid "Trim Name"
 msgstr ""
+

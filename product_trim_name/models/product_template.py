@@ -1,9 +1,8 @@
 # Copyright 2023 Berezi Amubieta - AvanzOSC
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
-import unicodedata
 
 from odoo import api, fields, models
-
+import unicodedata
 
 class ProductTemplate(models.Model):
     _inherit = "product.template"
@@ -20,3 +19,5 @@ class ProductTemplate(models.Model):
                 if unicodedata.category(c) != "Mn"
             )
             product.trim_name = trim_name
+
+
