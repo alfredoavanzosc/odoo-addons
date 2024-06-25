@@ -7,7 +7,9 @@ import unicodedata
 class ProductTemplate(models.Model):
     _inherit = "product.template"
 
-    trim_name = fields.Char(compute="_compute_trim_name", store=True)
+    trim_name = fields.Char(
+        string="Trim Name", compute="_compute_trim_name", store=True
+    )
 
     @api.depends("name")
     def _compute_trim_name(self):
@@ -19,5 +21,4 @@ class ProductTemplate(models.Model):
                 if unicodedata.category(c) != "Mn"
             )
             product.trim_name = trim_name
-
 
