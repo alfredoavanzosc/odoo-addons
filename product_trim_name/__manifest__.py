@@ -12,6 +12,5 @@
         "product",
     ],
     "data": [],
-    "installable": True
+    "installable": True,
 }
-
