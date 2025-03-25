@@ -1,0 +1,42 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_invoice_section_sale_order_ext
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-25 09:48+0000\n"
+"PO-Revision-Date: 2025-03-25 09:48+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_invoice_section_sale_order_ext
+#: model:ir.model.fields,field_description:account_invoice_section_sale_order_ext.field_sale_order__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: account_invoice_section_sale_order_ext
+#: model:ir.model.fields,field_description:account_invoice_section_sale_order_ext.field_sale_order__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_invoice_section_sale_order_ext
+#: model:ir.model.fields,field_description:account_invoice_section_sale_order_ext.field_sale_order____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: account_invoice_section_sale_order_ext
+#: code:addons/account_invoice_section_sale_order_ext/models/sale_order.py:0
+#, python-format
+msgid "Order: %(sale_order)s"
+msgstr "Pedido: %(sale_order)s"
+
+#. module: account_invoice_section_sale_order_ext
+#: model:ir.model,name:account_invoice_section_sale_order_ext.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
