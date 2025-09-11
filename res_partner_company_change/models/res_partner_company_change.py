@@ -65,7 +65,7 @@ class ResPartnerCompanyChange(models.Model):
 
     def button_open_import_line(self):
         self.ensure_one()
-        action_dict = super(ResPartnerCompanyChange, self).button_open_import_line()
+        action_dict = super().button_open_import_line()
         tree_view_id = self.env.ref(
             "res_partner_company_change.res_partner_company_change_line_view_tree"
         ).id
@@ -97,11 +97,19 @@ class ResPartnerCompanyChange(models.Model):
                 "import_id": self.id,
                 "partner_id": origin_contact.id,
                 "property_account_position_id": (self.property_account_position_id.id),
-                "customer_payment_mode_name": origin_contact.customer_payment_mode_id.name,
-                "supplier_payment_mode_name": origin_contact.supplier_payment_mode_id.name,
-                "delivery_carrier_name": origin_contact.property_delivery_carrier_id.name,
-                "payment_term_name": origin_contact.property_payment_term_id.name,
-                "supplier_payment_term_name": origin_contact.property_supplier_payment_term_id.name,
+                "customer_payment_mode_name": (
+                    origin_contact.customer_payment_mode_id.name
+                ),
+                "supplier_payment_mode_name": (
+                    origin_contact.supplier_payment_mode_id.name
+                ),
+                "delivery_carrier_name": (
+                    origin_contact.property_delivery_carrier_id.name
+                ),
+                "payment_term_name": (origin_contact.property_payment_term_id.name),
+                "supplier_payment_term_name": (
+                    origin_contact.property_supplier_payment_term_id.name
+                ),
             }
             lines.append((0, 0, line_data))
         return lines
@@ -119,7 +127,7 @@ class ResPartnerCompanyChangeLine(models.Model):
         selection_add=[
             ("update", "Update"),
         ],
-        ondelete="cascade",
+        ondelete={"update": "cascade"},
     )
     partner_id = fields.Many2one(
         string="Partner",

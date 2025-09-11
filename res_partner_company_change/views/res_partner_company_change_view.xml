@@ -3,14 +3,14 @@
   <record id="res_partner_company_change_view_tree" model="ir.ui.view">
     <field name="model">res.partner.company.change</field>
     <field name="arch" type="xml">
-      <tree decoration-muted="state == 'done'" decoration-bf="state == 'pass'">
+      <list decoration-muted="state == 'done'" decoration-bf="state == 'pass'">
         <field name="name" />
         <field name="file_date" />
         <field name="company_origin_id" groups="base.group_multi_company" />
         <field name="company_dest_id" groups="base.group_multi_company" />
         <field name="country_id" />
         <field name="state" />
-      </tree>
+      </list>
     </field>
   </record>
 
@@ -23,22 +23,22 @@
             name="action_import_file"
             string="Import"
             type="object"
-            class="oe_read_only"
-            states="draft,2validate,pass,error"
+            class="btn-primary"
+            invisible="state == 'done'"
           />
           <button
             name="action_validate"
             string="Validate"
             type="object"
-            class="oe_read_only"
-            states="2validate,error,pass"
+            class="btn-primary"
+            invisible="state in ('draft','done')"
           />
           <button
             name="action_process"
             string="Process"
             type="object"
-            class="oe_read_only"
-            states="pass,error"
+            class="btn-primary"
+            invisible="state in ('draft','2validate','done')"
           />
           <field name="state" widget="statusbar" />
         </header>
@@ -48,7 +48,7 @@
               string="Import Lines"
               type="object"
               name="button_open_import_line"
-              attrs="{'invisible':[('import_line_ids', '=', [])]}"
+              invisible="not import_line_ids"
               class="oe_stat_button"
               icon="fa-bars"
             />
@@ -56,7 +56,7 @@
               string="Contacts"
               type="object"
               name="button_open_partner"
-              attrs="{'invisible':[('contact_count', '=', 0)]}"
+              invisible="contact_count == 0"
               class="oe_stat_button"
               icon="fa-refresh"
             >
@@ -86,16 +86,12 @@
             <page string="Imported Lines">
               <field name="import_line_ids" />
             </page>
-            <page string="Error Log" attrs="{'invisible':[('log_info','=','')]}">
+            <page string="Error Log" invisible="[('log_info','=','')]">
               <field name="log_info" />
             </page>
           </notebook>
         </sheet>
-        <div class="oe_chatter">
-          <field name="message_follower_ids" widget="mail_followers" />
-          <field name="activity_ids" widget="mail_activity" />
-          <field name="message_ids" widget="mail_thread" />
-        </div>
+        <chatter />
       </form>
     </field>
   </record>
@@ -124,7 +120,7 @@
     <field name="name">Contacts Company Change</field>
     <field name="type">ir.actions.act_window</field>
     <field name="res_model">res.partner.company.change</field>
-    <field name="view_mode">tree,form</field>
+    <field name="view_mode">list,form</field>
     <field name="view_id" ref="res_partner_company_change_view_tree" />
   </record>
 

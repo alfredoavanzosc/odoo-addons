@@ -384,7 +384,7 @@ msgstr "Número de mensajes no leidos"
 #. module: res_partner_company_change
 #: model:ir.model.fields,field_description:res_partner_company_change.field_res_partner_company_change__company_origin_id
 msgid "Origin Company"
-msgstr "Compañóa origen"
+msgstr "Compañía origen"
 
 #. module: res_partner_company_change
 #: selection:res.partner.company.change,activity_state:0
