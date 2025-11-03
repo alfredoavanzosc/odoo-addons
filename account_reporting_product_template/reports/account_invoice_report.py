@@ -2,6 +2,7 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 from odoo import api, fields, models
+from odoo.tools import SQL
 
 
 class AccountInvoiceReport(models.Model):
@@ -14,14 +15,10 @@ class AccountInvoiceReport(models.Model):
 
     @api.model
     def _select(self):
-        select_str = super()._select()
-        select_str += """
-            , template.id as product_tmpl_id
+        return SQL(
             """
-        return select_str
-
-    @api.model
-    def _group_by(self):
-        group_by_str = super()._group_by()
-        group_by_str += ", template.id"
-        return group_by_str
+            %s,
+            product.product_tmpl_id AS product_tmpl_id
+        """,
+            super()._select(),
+        )
