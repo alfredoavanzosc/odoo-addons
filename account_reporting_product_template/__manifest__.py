@@ -3,7 +3,7 @@
 
 {
     "name": "Product template in the invoices analysis view",
-    "version": "16.0.1.0.0",
+    "version": "18.0.1.0.0",
     "category": "Account",
     "license": "AGPL-3",
     "author": "AvanzOSC",
