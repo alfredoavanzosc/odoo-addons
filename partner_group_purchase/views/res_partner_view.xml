@@ -9,14 +9,14 @@
           name="purchase_group_id"
           placeholder="Cooperative"
           options='{"no_open": True}'
-          attrs="{'invisible': [('is_company', '=', False)]}"
+          invisible="is_company == False"
         />
         <field name="supplier_rank" invisible="1" />
         <field
           name="purchase_group2_id"
           placeholder="Purchases Group"
           options='{"no_open": True}'
-          attrs="{'invisible': [('supplier_rank', '!=', 1)]}"
+          invisible="supplier_rank != 1"
         />
       </field>
     </field>
@@ -29,13 +29,13 @@
       <field name="email" position="after">
         <field
           name="purchase_group_id"
-          attrs="{'invisible': [('is_company', '=', False)]}"
+          invisible="is_company == False"
           optional="show"
         />
         <field name="supplier_rank" invisible="1" />
         <field
           name="purchase_group2_id"
-          attrs="{'invisible': [('supplier_rank', '!=', 1)]}"
+          invisible="supplier_rank != 1"
           optional="show"
         />
       </field>

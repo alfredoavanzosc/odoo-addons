@@ -6,7 +6,7 @@
 {
     "name": "Partner Purchase Group",
     "summary": "Add partner purchase group",
-    "version": "16.0.1.0.0",
+    "version": "18.0.1.0.0",
     "category": "Partner",
     "author": "Antiun Ingenieria & Tecnativa & AvanzOSC",
     "website": "https://github.com/avanzosc/odoo-addons",
