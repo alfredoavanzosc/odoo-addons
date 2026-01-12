@@ -6,7 +6,7 @@
 Stock picking operation tree view_limit
 =======================================
 
-This module sets a display limit of 200 lines of operations and detailed
+* This module sets a display limit of 200 lines of operations and detailed
   operations, in the form of pickings.
 
 
