@@ -18,28 +18,28 @@ msgstr ""
 #. module: account_invoice_with_start_end_date_period
 #: model:ir.model,name:account_invoice_with_start_end_date_period.model_contract_contract
 msgid "Contract"
-msgstr "Contrato"
+msgstr ""
 
 #. module: account_invoice_with_start_end_date_period
 #: model:ir.model.fields,field_description:account_invoice_with_start_end_date_period.field_account_bank_statement_line__end_date_period
 #: model:ir.model.fields,field_description:account_invoice_with_start_end_date_period.field_account_move__end_date_period
 #: model_terms:ir.ui.view,arch_db:account_invoice_with_start_end_date_period.view_account_invoice_filter
 msgid "End date period"
-msgstr "Fecha fin periodo"
+msgstr ""
 
 #. module: account_invoice_with_start_end_date_period
 #: model:ir.model,name:account_invoice_with_start_end_date_period.model_account_move
 msgid "Journal Entry"
-msgstr "Asiento contable"
+msgstr ""
 
 #. module: account_invoice_with_start_end_date_period
 #: model:ir.model,name:account_invoice_with_start_end_date_period.model_sale_order
 msgid "Sales Order"
-msgstr "Pedido de venta"
+msgstr ""
 
 #. module: account_invoice_with_start_end_date_period
 #: model:ir.model.fields,field_description:account_invoice_with_start_end_date_period.field_account_bank_statement_line__start_date_period
 #: model:ir.model.fields,field_description:account_invoice_with_start_end_date_period.field_account_move__start_date_period
 #: model_terms:ir.ui.view,arch_db:account_invoice_with_start_end_date_period.view_account_invoice_filter
 msgid "Start date period"
-msgstr "Fecha inicio periodo"
+msgstr ""
