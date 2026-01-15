@@ -1,12 +1,11 @@
 # Copyright 2020 Mikel Arregi Etxaniz - AvanzOSC
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
-from odoo import api, models
+from odoo import models
 
 
 class PurchaseOrderLine(models.Model):
     _inherit = "purchase.order.line"
 
-    @api.multi
     def copy_purchase_order_line(self):
         for line in self:
             line.copy(
