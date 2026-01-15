@@ -8,12 +8,10 @@
         "purchase",
     ],
     "author": "AvanzOSC",
-    "website": "http://www.avanzosc.es",
+    "website": "https://github.com/avanzosc/odoo-addons",
     "category": "",
-    "data": [
-        "views/purchase_order_view.xml"
-    ],
-    'demo': [],
-    'installable': True,
-    'auto_install': False,
+    "data": ["views/purchase_order_view.xml"],
+    "demo": [],
+    "installable": True,
+    "auto_install": False,
 }
