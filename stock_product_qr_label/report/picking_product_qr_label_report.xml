@@ -49,7 +49,7 @@
                 <span t-field="line.lot_id.ref" />
                 <br />
                 <span>Qty.: </span>
-                <span t-esc="int(line.qty_done)" />
+                <span t-esc="int(line.quantity)" />
                 <br />
                 <span>Date: </span>
                 <span
