@@ -4,12 +4,10 @@
 from odoo.tests import common
 
 
-@common.at_install(False)
-@common.post_install(True)
-class PurchaseOrderLineProductConfiguratorTest(common.SavepointCase):
+class PurchaseOrderLineProductConfiguratorTest(common.TransactionCase):
     @classmethod
     def setUpClass(cls):
-        super(PurchaseOrderLineProductConfiguratorTest, cls).setUpClass()
+        super().setUpClass()
         cls.product_model = cls.env["product.product"]
         cls.partner_model = cls.env["res.partner"]
         cls.uom_unit = cls.env.ref("uom.product_uom_unit")
