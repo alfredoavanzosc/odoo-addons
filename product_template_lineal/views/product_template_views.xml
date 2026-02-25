@@ -7,7 +7,7 @@
       <field name="categ_id" position="after">
         <field
           name="lineal_id"
-          attrs="{'invisible': ['&amp;', ('is_product_variant', '=', False), '&amp;', ('is_product_variant', '=', False), ('product_variant_count', '!=', 1)]}"
+          invisible="not is_product_variant and product_variant_count != 1"
         />
       </field>
     </field>
