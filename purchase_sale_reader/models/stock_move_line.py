@@ -40,7 +40,6 @@ class StockMoveLine(models.Model):
     @api.onchange("reader_ps")
     def onchange_reader_ps(self):
         if self.reader_ps:
-
             barcode_formats = self.search_barcode_format(
                 model=self._name,
                 partner_id=self.picking_id.partner_id.id,
