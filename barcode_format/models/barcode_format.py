@@ -7,9 +7,7 @@ class BarcodeFormat(models.Model):
 
     name = fields.Char(string="Format", required=True)
 
-    type = fields.Selection(
-        [("fijo", "Fijo"), ("variable", "Variable")], string="Type", required=True
-    )
+    type = fields.Selection([("fijo", "Fijo"), ("variable", "Variable")], required=True)
 
     model_id = fields.Many2one(
         "ir.model",
