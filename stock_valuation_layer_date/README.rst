@@ -6,7 +6,7 @@
 Stock Valuation Layer Date
 ==========================
 
-In stock valuation layer date field related to the stock move date.
+* In stock valuation layer date field related to the stock move date.
 
 Bug Tracker
 ===========
