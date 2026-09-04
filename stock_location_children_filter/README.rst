@@ -2,12 +2,12 @@
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 
-========================
-Account invoice download
-========================
+==============================
+Stock location children filter
+==============================
 
-* When downloading invoices from the list view, do not download them as proforma
-  invoices.
+* In locations, a new fields "Has Children" has been added to determine if a
+  location has a parent location. 
 
 Bug Tracker
 ===========
